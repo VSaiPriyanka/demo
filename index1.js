@@ -69,11 +69,11 @@ app.post("/login", (req, res) => {
     const pass = body.pass;
 
     if(username === "aryan" && pass === 123)
-        res.json({
+        res.status(200).json({
             data: "success",
         })
     else 
-        res.end("Incorrect creds")
+        res.status(404).end("Incorrect creds")
 })
 
 app.post('/create', async (req, res) => {
